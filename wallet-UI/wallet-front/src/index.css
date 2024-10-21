@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+@media only screen and (max-width: 1114px) {
+  .sticky-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 20px; /* Adjust this margin based on your design preferences */
+    z-index: 1000; /* Adjust the z-index as needed */
+  }
+}
+
+.custom-stepstitle-height {
+  height: calc(100vh - 150px);
+}
+
+input[type="date"]::before {
+  content: "انتخاب تاریخ";
+  position: absolute;
+  right: 42px;
+  color: #999999;
+}
+
+input[type="date"] {
+  color: #ffffff;
+}
+
+input[type="date"]:focus,
+input[type="date"]:valid {
+  color: #999999;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  content: "";
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  margin: -22px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.tox-notification--warning {
+  display: none !important;
+}
+
+.limited_width {
+  max-width: 450px;
+}
+
+.dashboard-width {
+  max-width: calc(100vw - 350px);
+}
+
+.p-datatable-row-expansion:hover {
+  background-color: white !important;
+}
+
+.p-datatable-row-expansion > td {
+  padding-inline: 0 !important;
+}
